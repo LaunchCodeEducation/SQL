@@ -10,17 +10,17 @@ sys.path.append(os.path.abspath('../exts'))
 # Customize for the specific site. Any options in the html_theme_options
 # dictionary below may be overriden here
 site_theme_options = {
-    'navbar_title': 'Curriculum Docs',
+    'navbar_title': 'Structured Query Language',
     'navbar_site_name': "Pages",
     'bootswatch_theme': 'launchcode',
 }
 
-project = 'LaunchCode Curriculum Docs'
+project = 'Structured Query Language (SQL)'
 
 # -- Project information -----------------------------------------------------
 
 
-copyright = '2018, LaunchCode'
+copyright = '2022, LaunchCode'
 author = 'LaunchCode'
 
 # The short X.Y version
