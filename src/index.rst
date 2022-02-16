@@ -1,4 +1,4 @@
-LaunchCode Curriculum Site Template
+LaunchCode SQL Test
 ===================================
 
 This is a test
