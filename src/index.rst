@@ -3,6 +3,9 @@ LaunchCode SQL Test
 
 This is a test
 
+Today is Wednesday
+
+
 This repository is a template for LaunchCode curriculum module sites to be hosted via GitHub Pages, either under `@LaunchCodeEducation`_ or `@LaunchCoderGirl`_.
       
 To set up a new curriculum module, see the `curriculum docs`_.
