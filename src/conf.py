@@ -10,7 +10,7 @@ sys.path.append(os.path.abspath('../exts'))
 # Customize for the specific site. Any options in the html_theme_options
 # dictionary below may be overriden here
 site_theme_options = {
-    'navbar_title': 'Structured Query Language',
+    'navbar_title': 'Structured Query Language (SQL)',
     'navbar_site_name': "Pages",
     'bootswatch_theme': 'launchcode',
 }

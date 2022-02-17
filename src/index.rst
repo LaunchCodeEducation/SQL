@@ -1,15 +1,31 @@
-LaunchCode SQL Test
-===================================
+MySQL Lessons
+=============
 
-This is a test
+.. toctree::
+   :numbered:
+   :maxdepth: 1
+   :name: chapterstoc
 
-Today is Wednesday
+   chapters/mysql-part-1/index
 
 
-This repository is a template for LaunchCode curriculum module sites to be hosted via GitHub Pages, either under `@LaunchCodeEducation`_ or `@LaunchCoderGirl`_.
-      
-To set up a new curriculum module, see the `curriculum docs`_.
+Appendices
+==========
 
-.. _@LaunchCodeEducation: https://github.com/launchcodeeducation
-.. _@LaunchCoderGirl: https://github.com/LaunchCoderGirlSTL
-.. _curriculum docs: https://education.launchcode.org/curriculum-docs/
+.. toctree::
+   :maxdepth: 1
+   :name: appendicestoc
+
+   appendices/mysql-install
+
+.. toctree::
+
+   genindex
+
+
+.. toctree::
+   :hidden:
+
+   todos
+   index-full
+   glossary
