@@ -8,6 +8,7 @@ MySQL Lessons
 
    chapters/mysql-part-1/index
 
+
 Appendices
 ==========
 
