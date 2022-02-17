@@ -7,6 +7,7 @@ MySQL Lessons
    :name: chapterstoc
 
    chapters/mysql-part-1/index
+   chapters/mysql-part-2/index
 
 
 Appendices
