@@ -1,23 +1,18 @@
-Chapters
-========
+MySQL
+=====
 
 .. toctree::
-   :maxdepth: 2
+   :numbered:
+   :maxdepth: 1
    :name: chapterstoc
 
    chapters/mysql-part-1/index
    chapters/mysql-part-2/index
 
-
-Studios
-=======
-
 .. toctree::
-   :maxdepth: 1
-   :name: studiotoc
 
-   chapters/mysql-part-1/studio
-   
+   genindex
+
 Appendices
 ==========
 
@@ -37,3 +32,4 @@ Appendices
 
    todos
    glossary
+
