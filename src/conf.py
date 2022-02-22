@@ -10,7 +10,7 @@ sys.path.append(os.path.abspath('../exts'))
 # Customize for the specific site. Any options in the html_theme_options
 # dictionary below may be overriden here
 site_theme_options = {
-    'navbar_title': 'Structured Query Language (SQL)',
+    'navbar_title': '',
     'navbar_site_name': "Pages",
     'bootswatch_theme': 'launchcode',
 }
@@ -45,6 +45,14 @@ extensions = [
 
 replit_user = 'launchcode'
 
+## --- Added from JS book
+
+# numfig:
+numfig_number_figures = True
+numfig_figure_caption_prefix = "Figure"
+
+## -- End 
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
@@ -55,7 +63,7 @@ source_suffix = ['.rst', '.md']
 source_parsers = {'.md': 'recommonmark.parser.CommonMarkParser'}
 
 html_copy_source = True
-html_show_sourcelink = True
+html_show_sourcelink = True  #new
 highlight_language = 'none'
 html_show_copyright = False
 html_show_sphinx = False
@@ -163,10 +171,8 @@ html_static_path = ['_static']
 # 'searchbox.html']``.
 #
 html_sidebars = {
-    '**': ['localtoc.html'],
-    'index': [],
-    'search': [],
-    'about': []
+    '**': [],
+
 }
 
 
@@ -184,7 +190,4 @@ todo_include_todos = False
 def setup(app):
    app.add_css_file('fa/css/all.css')
    app.add_css_file('css/launchcode.css')
-   app.add_config_value('recommonmark_config', {
-         'enable_eval_rst': True,
-         }, True)
-   app.add_transform(AutoStructify)
+   app.add_css_file('css/site.css')

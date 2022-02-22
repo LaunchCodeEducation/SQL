@@ -1,9 +1,9 @@
-.. _sql-installation:
-
 Installing MySQL
 ================
 
-.. index:: SQL
+.. _sql-installation:
+
+.. index:: ! SQL
 
 A couple of chapters in this book cover SQL.
 Before we get started learning the ins and outs of the language, let's make sure we have everything properly installed!
@@ -16,7 +16,7 @@ For this class, we will be using MySQL version 8.0.18, the most current version.
 
 
 Mac Users
----------
+^^^^^^^^^
 
 First, you need to install MySQL itself.
 The `Community Server 8.0.18 download page <https://dev.mysql.com/downloads/mysql/>`_ has a dropdown menu for the operating system you need.
@@ -59,7 +59,7 @@ When you first open MySQL workbench, you will see your local MySQL server on the
 Double-click to access the server, enter the password, and you're ready to start querying away!
 
 Windows Users
--------------
+^^^^^^^^^^^^^
 
 Windows users have a MySQL Installer available and that is what you will be using to install MySQL!
 The `Installer download page <https://dev.mysql.com/downloads/installer/>`_ has a couple options available.
