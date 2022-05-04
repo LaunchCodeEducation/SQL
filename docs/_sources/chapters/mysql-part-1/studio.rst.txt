@@ -14,7 +14,7 @@ Walkthrough
 Let's relate what you've learned about SQL to interact with a database called
 ``movie-buff`` that contains two tables---``movies`` and ``directors``.
 
-Just as you did in the :ref:`exercises <sql-part1-exercises>` create the new
+Just as you did in the :ref:`exercises <mysql-part1-exercises>` create the new
 ``movie-buff`` schema.
 
 Before we create the ``movies`` and ``directors`` tables, let's think about

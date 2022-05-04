@@ -1,7 +1,7 @@
 Database Management
 ===================
 
-Back in the :ref:`Database and SQL chapter exercises <sql-part1-exercises>`,
+Back in the :ref:`Database and SQL chapter exercises <mysql-part1-exercises>`,
 you created a new database in MySQL Workbench with one table, ``seeds``.
 
 Let's go through the process again, but this time we will set up one-to-many

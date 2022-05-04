@@ -20,7 +20,7 @@ Appendices
    :name: appendicestoc
 
    appendices/mysql-install
-
+   appendices/exercise-solutions/index
 
 
 

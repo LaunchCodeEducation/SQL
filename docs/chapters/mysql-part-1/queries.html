@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>1.2. SQL Queries &#8212; Structured Query Language (SQL)  documentation</title>
-    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/fa/css/all.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/launchcode.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/site.css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
-    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../../_static/js/jquery-fix.js"></script>
+    <script src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="1.3. Joins" href="joins.html" />
@@ -60,7 +59,7 @@
            
 <form class="navbar-form navbar-right" action="../../search.html" method="get">
  <div class="form-group">
-    <label for="q" class="searchLabel">Search</label>
+    <label for="q" class="searchLabel">Search Me</label>
     <input type="text" name="q" class="form-control" />
  </div>
   <input type="hidden" name="check_keywords" value="yes" />
@@ -73,8 +72,8 @@
 
 <ol class="breadcrumb container">
     <li><a href="../../index.html">Contents</a></li>
-    <li><a href="index.html">1. Databases and SQL</a></li>
-    <li class="active">1.2. SQL Queries</li>
+    <li><a href="index.html"><span class="section-number">1. </span>Databases and SQL</a></li>
+    <li class="active"><span class="section-number">1.2. </span>SQL Queries</li>
 </ol>
 
 
@@ -85,7 +84,7 @@
 
     
   <div class="section" id="sql-queries">
-<h1>1.2. SQL Queries<a class="headerlink" href="#sql-queries" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">1.2. </span>SQL Queries<a class="headerlink" href="#sql-queries" title="Permalink to this headline">¶</a></h1>
 <p id="index-0">When we want to perform an operation on a database, we write a SQL <strong>query</strong>.
 Queries can vary widely in complexity and purpose depending on the operation we
 need to perform. Each query produces a <strong>result set</strong> containing the requested
@@ -107,13 +106,13 @@ Our event planner, Mary, has a database storing the guest info of every event sh
 She named each table of guest info after the event itself.</p>
 </div>
 <div class="section" id="create">
-<h2>1.2.1. Create<a class="headerlink" href="#create" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.2.1. </span>Create<a class="headerlink" href="#create" title="Permalink to this headline">¶</a></h2>
 <p>When we talk about creating something in SQL, we could want to create a table,
 add a row, or add a column.</p>
 <div class="section" id="creating-a-table">
-<h3>1.2.1.1. Creating a Table<a class="headerlink" href="#creating-a-table" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.2.1.1. </span>Creating a Table<a class="headerlink" href="#creating-a-table" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="creating-a-table-from-scratch">
-<h4>1.2.1.1.1. Creating a Table from Scratch<a class="headerlink" href="#creating-a-table-from-scratch" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">1.2.1.1.1. </span>Creating a Table from Scratch<a class="headerlink" href="#creating-a-table-from-scratch" title="Permalink to this headline">¶</a></h4>
 <p>Let’s say that we are working on our events database. Mary has been working
 hard planning the Li wedding. She wants us to create a table with the pertinent
 guest info of every guest invited. Each row will represent one guest. The
@@ -122,21 +121,15 @@ their last name, their dietary preferences, and whether or not they will be in
 attendance.</p>
 <p>To add a table to our database for the Li wedding, we need to use the
 <code class="docutils literal notranslate"><span class="pre">CREATE</span> <span class="pre">TABLE</span></code> command.</p>
-<div class="highlight-mysql notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">li_wedding</span> <span class="p">(</span>
-   <span class="n">guest_id</span> <span class="kt">INT</span><span class="p">,</span>
-   <span class="n">last_name</span> <span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
-   <span class="n">first_name</span> <span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
-   <span class="n">attending</span> <span class="kt">BOOL</span><span class="p">,</span>
-   <span class="n">diet</span> <span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span>
-<span class="p">);</span>
+<div class="highlight-mysql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">li_wedding</span> <span class="p">(</span>
+<span class="linenos">2</span>   <span class="n">guest_id</span> <span class="kt">INT</span><span class="p">,</span>
+<span class="linenos">3</span>   <span class="n">last_name</span> <span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+<span class="linenos">4</span>   <span class="n">first_name</span> <span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+<span class="linenos">5</span>   <span class="n">attending</span> <span class="kt">BOOL</span><span class="p">,</span>
+<span class="linenos">6</span>   <span class="n">diet</span> <span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span>
+<span class="linenos">7</span><span class="p">);</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 <p>This query creates a new table in our database called <code class="docutils literal notranslate"><span class="pre">li_wedding</span></code>. This
 table contains five columns: <code class="docutils literal notranslate"><span class="pre">guest_id</span></code> of type <code class="docutils literal notranslate"><span class="pre">INT</span></code>, <code class="docutils literal notranslate"><span class="pre">last_name</span></code> of
 type <code class="docutils literal notranslate"><span class="pre">VARCHAR(255)</span></code>, <code class="docutils literal notranslate"><span class="pre">first_name</span></code> of type <code class="docutils literal notranslate"><span class="pre">VARCHAR(255)</span></code>, <code class="docutils literal notranslate"><span class="pre">attending</span></code>
@@ -145,7 +138,7 @@ of type <code class="docutils literal notranslate"><span class="pre">BOOL</span>
 table. We will learn how to add to a table a little further down the page.</p>
 </div>
 <div class="section" id="creating-a-table-from-another-table">
-<h4>1.2.1.1.2. Creating a Table from Another Table<a class="headerlink" href="#creating-a-table-from-another-table" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">1.2.1.1.2. </span>Creating a Table from Another Table<a class="headerlink" href="#creating-a-table-from-another-table" title="Permalink to this headline">¶</a></h4>
 <p>We can also create a table from another table.
 When doing so, the new table will also include any existing data from the
 original table.</p>
@@ -155,15 +148,12 @@ list to be the exact same. A good place to start would be to create a table
 called <code class="docutils literal notranslate"><span class="pre">johnson_vow_renewal</span></code> from the table called <code class="docutils literal notranslate"><span class="pre">johnson_wedding</span></code>. Due
 to some wedding drama, Mr. and Mrs. Johnson want to avoid inviting anyone who
 didn’t show up for the first ceremony.</p>
-<div class="highlight-mysql notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">johnson_vow_renewal</span>
-<span class="k">AS</span> <span class="k">SELECT</span> <span class="n">guest_id</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">attending</span><span class="p">,</span> <span class="n">diet</span>
-   <span class="k">FROM</span> <span class="n">johnson_wedding</span>
-   <span class="k">WHERE</span> <span class="n">attending</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<div class="highlight-mysql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">johnson_vow_renewal</span>
+<span class="linenos">2</span><span class="k">AS</span> <span class="k">SELECT</span> <span class="n">guest_id</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">attending</span><span class="p">,</span> <span class="n">diet</span>
+<span class="linenos">3</span>   <span class="k">FROM</span> <span class="n">johnson_wedding</span>
+<span class="linenos">4</span>   <span class="k">WHERE</span> <span class="n">attending</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 <p>This query creates the <code class="docutils literal notranslate"><span class="pre">johnson_vow_renewal</span></code> table with the same columns as
 <code class="docutils literal notranslate"><span class="pre">johnson_wedding</span></code>. We use <code class="docutils literal notranslate"><span class="pre">AS</span> <span class="pre">SELECT</span></code> to specify the columns that will be
 carried over from the <code class="docutils literal notranslate"><span class="pre">johnson_wedding</span></code> table to the
@@ -174,7 +164,7 @@ copy over all of the data from <code class="docutils literal notranslate"><span 
 </div>
 </div>
 <div class="section" id="adding-a-row">
-<h3>1.2.1.2. Adding a Row<a class="headerlink" href="#adding-a-row" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.2.1.2. </span>Adding a Row<a class="headerlink" href="#adding-a-row" title="Permalink to this headline">¶</a></h3>
 <p>Whether we have created a table from scratch or are working with an existing
 table, we may need to add a row of data. To do so, we need to use an
 <code class="docutils literal notranslate"><span class="pre">INSERT</span> <span class="pre">INTO</span></code> statement.</p>
@@ -206,7 +196,7 @@ values for the columns: <code class="docutils literal notranslate"><span class="
 </div>
 </div>
 <div class="section" id="adding-a-column">
-<h3>1.2.1.3. Adding a column<a class="headerlink" href="#adding-a-column" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.2.1.3. </span>Adding a column<a class="headerlink" href="#adding-a-column" title="Permalink to this headline">¶</a></h3>
 <p>Sometimes, we may also need to add a column to our table. Some of the caterers
 Mary works with have asked that she confirm how many people are of drinking
 age. We may now want to add a column to our <code class="docutils literal notranslate"><span class="pre">li_wedding</span></code> table that contains
@@ -229,7 +219,7 @@ in the table once we confirm how old they are.</p>
 </div>
 </div>
 <div class="section" id="read">
-<h2>1.2.2. Read<a class="headerlink" href="#read" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.2.2. </span>Read<a class="headerlink" href="#read" title="Permalink to this headline">¶</a></h2>
 <p>When reading data, we don’t want to modify anything, we just want to know what
 is there. In order to get information from a table, we need to use a <code class="docutils literal notranslate"><span class="pre">SELECT</span></code>
 statement.</p>
@@ -248,13 +238,11 @@ last names of guests who will be in attendance and are vegetarian. So, we will
 <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> the <code class="docutils literal notranslate"><span class="pre">last_name</span></code> and <code class="docutils literal notranslate"><span class="pre">first_name</span></code> columns <code class="docutils literal notranslate"><span class="pre">FROM</span></code> the
 <code class="docutils literal notranslate"><span class="pre">li_wedding</span></code> table <code class="docutils literal notranslate"><span class="pre">WHERE</span></code> the value of <code class="docutils literal notranslate"><span class="pre">attending</span></code> is <code class="docutils literal notranslate"><span class="pre">TRUE</span></code> and the
 value of <code class="docutils literal notranslate"><span class="pre">diet</span></code> is <code class="docutils literal notranslate"><span class="pre">&quot;vegetarian&quot;</span></code>.</p>
-<div class="highlight-mysql notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">first_name</span>
-<span class="k">FROM</span> <span class="n">li_wedding</span>
-<span class="k">WHERE</span> <span class="p">(</span><span class="n">attending</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="k">AND</span> <span class="p">(</span><span class="n">diet</span> <span class="o">=</span> <span class="s2">&quot;vegetarian&quot;</span><span class="p">);</span>
+<div class="highlight-mysql notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">SELECT</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">first_name</span>
+<span class="linenos">2</span><span class="k">FROM</span> <span class="n">li_wedding</span>
+<span class="linenos">3</span><span class="k">WHERE</span> <span class="p">(</span><span class="n">attending</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="k">AND</span> <span class="p">(</span><span class="n">diet</span> <span class="o">=</span> <span class="s2">&quot;vegetarian&quot;</span><span class="p">);</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 <p>If Mary just wants all of the guests for the Li wedding, we need to modify our
 <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> statement. We won’t apply a <code class="docutils literal notranslate"><span class="pre">WHERE</span></code> condition to our query and we
 will use a <code class="docutils literal notranslate"><span class="pre">*</span></code> to denote that we want all columns.</p>
@@ -264,7 +252,7 @@ will use a <code class="docutils literal notranslate"><span class="pre">*</span>
 </div>
 </div>
 <div class="section" id="update">
-<h2>1.2.3. Update<a class="headerlink" href="#update" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.2.3. </span>Update<a class="headerlink" href="#update" title="Permalink to this headline">¶</a></h2>
 <p>Now that we can add data and see what our data actually is, let’s start
 changing it!</p>
 <div class="admonition-warning admonition">
@@ -300,7 +288,7 @@ updated the record.</p>
 </div>
 </div>
 <div class="section" id="delete">
-<h2>1.2.4. Delete<a class="headerlink" href="#delete" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.2.4. </span>Delete<a class="headerlink" href="#delete" title="Permalink to this headline">¶</a></h2>
 <p>Our final operation we may want to perform on a table is to delete something.</p>
 <div class="admonition-warning admonition">
 <p class="first admonition-title"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i>Warning</p>
@@ -323,7 +311,7 @@ been removed.</p>
 </div>
 </div>
 <div class="section" id="check-your-understanding">
-<h2>1.2.5. Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.2.5. </span>Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h2>
 <div class="admonition-question admonition">
 <p class="first admonition-title"><i class="fas fa-question" aria-hidden="true"></i>Question</p>
 <p>What does the following query do?</p>
@@ -344,27 +332,18 @@ been removed.</p>
 We now need to create a table for the events that Leah is going to be planning.
 We also need to add a row for her first clients, Tate and Carlos.
 Does the following query accomplish this task?</p>
-<div class="last highlight-mysql notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">LeahEvents</span> <span class="p">(</span>
-   <span class="n">EventID</span> <span class="kt">int</span><span class="p">,</span>
-   <span class="n">EventName</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
-   <span class="k">Month</span> <span class="kt">int</span><span class="p">,</span>
-   <span class="k">Day</span> <span class="kt">int</span><span class="p">,</span>
-   <span class="kt">Year</span> <span class="kt">int</span>
-<span class="p">);</span>
-
-<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">LeahEvents</span>
-<span class="k">VALUES</span> <span class="p">(</span><span class="mi">256</span><span class="p">,</span> <span class="s2">&quot;SmithWedding&quot;</span><span class="p">,</span> <span class="mi">08</span><span class="p">,</span> <span class="mi">08</span><span class="p">,</span> <span class="mi">2021</span><span class="p">);</span>
+<div class="last highlight-mysql notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">LeahEvents</span> <span class="p">(</span>
+<span class="linenos"> 2</span>   <span class="n">EventID</span> <span class="kt">int</span><span class="p">,</span>
+<span class="linenos"> 3</span>   <span class="n">EventName</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+<span class="linenos"> 4</span>   <span class="k">Month</span> <span class="kt">int</span><span class="p">,</span>
+<span class="linenos"> 5</span>   <span class="k">Day</span> <span class="kt">int</span><span class="p">,</span>
+<span class="linenos"> 6</span>   <span class="kt">Year</span> <span class="kt">int</span>
+<span class="linenos"> 7</span><span class="p">);</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">LeahEvents</span>
+<span class="linenos">10</span><span class="k">VALUES</span> <span class="p">(</span><span class="mi">256</span><span class="p">,</span> <span class="s2">&quot;SmithWedding&quot;</span><span class="p">,</span> <span class="mi">08</span><span class="p">,</span> <span class="mi">08</span><span class="p">,</span> <span class="mi">2021</span><span class="p">);</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 </div>
 </div>
 </div>
@@ -375,10 +354,10 @@ Does the following query accomplish this task?</p>
     <nav aria-label="Next and Previous Pages">
       <ul class="pager">
         
-        <li class="previous"><a href="background.html"><span aria-hidden="true">&larr;</span> 1.1. What is SQL?</a></li>
+        <li class="previous"><a href="background.html"><span aria-hidden="true">&larr;</span> <span class="section-number">1.1. </span>What is SQL?</a></li>
         
         
-        <li class="next"><a href="joins.html">1.3. Joins <span aria-hidden="true">&rarr;</span></a></li>
+        <li class="next"><a href="joins.html"><span class="section-number">1.3. </span>Joins <span aria-hidden="true">&rarr;</span></a></li>
         
       </ul>
     </nav>
